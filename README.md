@@ -1,4 +1,3 @@
-Markdown
 # JARPIZ: Local AI Assistant Workspace 🎙️🤖
 
 An advanced, offline-first AI desktop assistant built with Python. Jarpiz combines modern interface design with powerful local language models to deliver real-time, privacy-focused voice interactions and system automation.
@@ -23,33 +22,39 @@ An advanced, offline-first AI desktop assistant built with Python. Jarpiz combin
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Reaivaldy/Jarpiz-simple-AI-Asistant.git
+   git clone [https://github.com/Reaivaldy/Jarpiz-simple-AI-Asistant.git](https://github.com/Reaivaldy/Jarpiz-simple-AI-Asistant.git)
    cd Jarpiz-simple-AI-Asistant
-Create and activate a virtual environment:
+   ```
 
-Bash
+2. **Create and activate a virtual environment:**
+   ```bash
    python -m venv venv
+   
+   # On Windows:
+   venv\Scripts\activate
+   
+   # On Mac/Linux:
+   source venv/bin/activate
+   ```
 
-# On Windows:
-venv\Scripts\activate
+3. **Install the dependencies:**
+   ```bash
+   pip install numpy SpeechRecognition pyaudio langchain-core langchain-ollama langchain-openai kokoro
+   ```
 
-# On Mac/Linux:
-source venv/bin/activate
-Install the dependencies:
+4. **Boot your local LLM engine:**
+   Ensure you have [Ollama](https://ollama.com/) installed and running on your system.
+   ```bash
+   ollama run llama3.2
+   ```
 
-Bash
-pip install numpy SpeechRecognition pyaudio langchain-core langchain-ollama langchain-openai kokoro
-Boot your local LLM engine:
-Ensure you have Ollama installed and running on your system.
+5. **Launch the Workspace:**
+   ```bash
+   python app.py
+   ```
 
-Bash
-ollama run llama3.2
-Launch the Workspace:
+## 🧠 System Architecture Notes
+This assistant uses a dynamic routing system to handle hardware inputs and audio outputs, mapping them in real-time without requiring system reboots. It specifically utilizes `HTMLParser` for safe, script-free text extraction from target URLs, keeping the Llama context window clean and highly focused.
 
-Bash
-python app.py
-🧠 System Architecture Notes
-This assistant uses a dynamic routing system to handle hardware inputs and audio outputs, mapping them in real-time without requiring system reboots. It specifically utilizes HTMLParser for safe, script-free text extraction from target URLs, keeping the Llama context window clean and highly focused.
-
-👨‍💻 Author
-Reaivaldy Mahaputra Riyanto Information Systems & Full-Stack Developer Focusing on Artificial Intelligence, Agentic Workflows, and System Integration.
+## 👨‍💻 Author
+**Reaivaldy Mahaputra Riyanto** *Information Systems & Full-Stack Developer* Focusing on Artificial Intelligence, Agentic Workflows, and System Integration.
